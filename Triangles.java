@@ -25,4 +25,7 @@ public class Triangles{
     }
     return "scalene";
   }
+  public String toString(){
+    return "v1("+v1.x+","+v1.y+") v2("+v2.x+","+v2.y+") v3("+v3.x+","+v3.y+")";
+  }
 }
