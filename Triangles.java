@@ -10,7 +10,13 @@ public class Triangles{
     v2 = Point(x2,y2);
     v3 = Point(x3,y3);
   }
+<<<<<<< HEAD
   public double perimeter(Point a, Point b, Point c){
     return(v1.distanceTo(v2)+v2.distanceTo(v3)+v3.distanceTo(v1));
+=======
+  public getArea(){
+    double semi = getPerimeter();
+    return Math.sqrt(semi*(semi-v1.distanceTo(v2)*(semi-v2.distanceTo(v3))*(semi-v3.distanceTo(v1))));
+>>>>>>> a6f52498cdd88ac2ca2da21f94e482b1d3b7a9fd
   }
 }
