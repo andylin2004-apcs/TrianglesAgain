@@ -18,9 +18,15 @@ public class Triangle{
     return Math.sqrt(semi*(semi-v1.distanceTo(v2))*(semi-v2.distanceTo(v3))*(semi-v3.distanceTo(v1)));
   }
   public String classify(){
-    if (v1.distanceTo(v2)*10000 == v2.distanceTo(v3) && v2.distanceTo(v3) == v3.distanceTo(v1)){
+    double a = Math.round(v1.distanceTo(v2)*10000.00);
+    double b = Math.round(v2.distanceTo(v3)*10000.00);
+    double c = Math.round(v3.distanceTo(v1)*10000.00);
+    a /= 10000.00;
+    b /= 10000.00;
+    c /= 10000.00;
+    if (a == b && b == c){
       return "equilateral";
-    }else if ((v1.distanceTo(v2) == v2.distanceTo(v3) && v3.distanceTo(v1) != v1.distanceTo(v2) || v1.distanceTo(v2) != v2.distanceTo(v3) && v2.distanceTo(v3) == v3.distanceTo(v1))){
+    } else if (a == b || b == c || a == c){
       return "isosceles";
     }
     return "scalene";
